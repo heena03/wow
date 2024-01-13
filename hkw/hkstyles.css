@@ -1,0 +1,506 @@
+/* Hide the audio element */
+/* audio {
+  display: none;
+} */
+b{
+    font-size: 20px;
+    
+}
+
+form{
+  text-align: center;
+}
+
+.texts{
+  color:rgb(53, 14, 90);
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 80%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0); /* Fallback color */
+  background-color: whitesmoke; /* Black w/ opacity */
+  padding-top: 60px;
+  text-align: center;
+  
+}
+.remember{
+  font-size: small;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  
+}
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+
+.container {
+  padding: 16px;
+  font-size: small;
+  text-align: center;
+  
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .forgot {
+     display: block;
+     float: none;
+     text-align: center;
+    
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+button{
+  border: none;
+  font-size: 20px;
+  color:#000;
+  background-color:rosybrown;
+  border-radius: 3px;
+}
+.align{
+  text-align: right;
+}
+
+
+button:hover{
+  background-color: rgb(116, 12, 12) ;
+}
+
+
+/* Style the links inside the sidenav */
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+   left:-80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding:15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: black; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+
+header{
+    
+  text-align: center;
+  color: rgb(116, 12, 12);
+  background-color:rosybrown;
+  font-size: 35px;
+  font-style: oblique;
+}
+
+
+
+
+.dropbtn {
+  background-color: rosybrown;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none; 
+}
+.helpbtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+}
+
+.sharebtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.sharebtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+}
+
+.instabtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.instabtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+}
+.searchbtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.searchbtn {
+  background-color: rosybrown;
+  padding: 10px;
+  
+  border: none; 
+}
+
+.coursebtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.coursebtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+
+  background-color: rosybrown;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none; 
+}
+.helpbtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+}
+
+.helpbtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:rgb(116, 12, 12);}
+
+
+.dropdown1-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown1-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown1-content a:hover {background-color: #ddd;}
+
+.dropdown1:hover .dropdown1-content {display: block;}
+
+.dropdown1:hover .coursebtn {background-color:rgb(116, 12, 12);}
+
+
+/*help*/
+.dropdown2-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown2-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown2{
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown2-content a:hover {background-color: #ddd;}
+
+.dropdown2:hover .dropdown2-content {display: block;}
+
+.dropdown2:hover .helpbtn {background-color:rgb(116, 12, 12);}
+
+
+
+/*share*/
+.dropdown3-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown3-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown3{
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown3-content a:hover {background-color: #ddd;}
+
+.dropdown3:hover .dropdown3-content {display: block;}
+
+.dropdown3:hover .sharetn {background-color:rgb(116, 12, 12);}
+
+
+/*insta*/
+.dropdown4-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown4-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown4{
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown4-content a:hover {background-color: #ddd;}
+
+.dropdown4:hover .dropdown4-content {display: block;}
+
+.dropdown4:hover .instabtn {background-color:rgb(116, 12, 12);}
+
+/*facebook*/
+.facebtn:hover {background-color:rgb(116, 12, 12);}
+nav{
+  text-align:right;
+}
+
+.facebtn {
+  background-color: rosybrown;
+  padding: 16px;
+  
+  border: none; 
+}
+.dropdown5-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown5-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown5{
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.dropdown5-content a:hover {background-color: #ddd;}
+
+.dropdown5:hover .dropdown5-content {display: block;}
+
+.dropdown5:hover .facebtn {background-color:rgb(116, 12, 12);}
+
+
+
+
+
+header{
+    
+  text-align: center;
+  color:maroon;
+  background-color:white;
+  font-size: 45px;
+  font-style: oblique;
+}
+.todo{
+  text-align: left;
+}
+
+#myInput{
+
+    width: 50%;
+   /* Full-width */
+    font-size: 20px; /* Increase font-size */
+    padding: 10px 18px 10px 35px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #myUL {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .search-bar-item{
+    display:none;
+    
+  }
+  
+  #myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 10px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 10px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: none; /* Make it into a block element to fill the whole list */
+  
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+  
+
+  h2,h3,h4,h5,h6{
+    color:black;
+    background-color:rosybrown ;
+    font-size: 30px;
+    font-style: oblique;
+    text-align: center;
+  }
+  body{
+    color:rgb(116, 12, 12);
+    font-style: oblique;
+    text-align: center;
+  }
+
+
+

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbot</title>
+    <link rel="stylesheet" href="stylechat.css">
+    <script src="chat.js"></script>
+    <script>
+        function talk(){
+    var know = {
+    "Who are you?" : "I am hk the helper ",
+    "who are you":" I am hk the helper",
+    "how are you" : "Good :)",
+    "What can i do for you" : "Please Give us A Follow & Like.",
+    "ok" : "Thank You So Much ",
+    "Bye" : "Okay! Will meet soon..",
+    "Hello" : "Hii, hk here",
+    "hello":"hey, hk here",
+    "what is your name" : "my name is hk",
+    "hii":"hello, what can i do for you",
+    "hi":"hello, what can i do for you",
+    "Hi.":"hello, what can i do for you",
+    "Hello." : "Hii, hk here",
+    };
+    var user = document.getElementById('userBox').value;
+    document.getElementById('chatLog').innerHTML = user + "<br>";
+    if (user in know) {
+    document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+    }else{
+    document.getElementById('chatLog').innerHTML = "Sorry,I didn't understand <br>";
+    }
+    }
+     function voice(){
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang="en-GB";
+            recognition.onresult=function(event){
+                console.log(event);
+                document.getElementById("userBox").value =
+                 event.results[0][0].transcript;
+               
+            }
+            recognition.start();
+     }
+    </script>
+   <style>
+    
+  /* chatbot code*/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: left;
+    }
+   
+    body {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    padding: 10em 10em;
+    background: url(./bg.jpg);
+    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 100% 20%;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+    .glass {
+    width: 50%;
+    height: 400px;
+    background-color: rosybrown;
+    padding: 50px;
+    color:rgb(116, 12, 12);
+    border-radius: 9px;
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+    line-height: 1.5;
+    /* transform: translatey(-5%); */
+    transition: transform 0.5s;
+    text-align: center;
+    opacity: 1;
+    }
+    .glass:hover{
+      opacity: 0.75;
+      color:rosybrown;
+      background-color:rgb(116, 12, 12);
+      font-weight: 500;
+    }
+    .glass-1 {
+    width: 500px;
+    height: 400px;
+    background-color: rosybrown;
+    padding: 50px;
+    color:rgb(116, 12, 12) ; 
+    border-radius: 9px;
+    backdrop-filter: blur(50px);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+    line-height: 1.5;
+    transform: translatey(-5%);
+    transition: transform 0.5s;
+    font-size: 1.7rem;
+  
+    }
+    .glass h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    }
+    .glass h2 {
+    font-size: 1rem;
+    margin-top: 20px;
+    }
+    .input {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 40px;
+    }
+    .input input {
+    width: 100%;
+    height: 70px;
+    border: none;
+    padding-left: 30px;
+    padding-top: 0;
+    outline: none;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    }
+    .glass p {
+    font-size: 1.6rem;
+    margin-top: 30px;
+    }
+    
+    .mic{
+      text-align: left;
+      font-size: 20px;
+      background-color:maroon;
+      color: rosybrown;
+      border: none;
+     }
+     .mic:hover{
+      background-color: maroon;
+     color: rosybrown;
+
+     }
+   .mic img {
+    border-radius: 10px;
+    background-color: rosybrown;
+    
+   border: none; 
+   }
+ 
+   </style>
+</head>
+<body>    <div class="glass">
+        <h1>Ask Your Question?</h1>
+        <h2>Yeah,ask Some Question</h2>
+       
+        <div class="input">
+        <input type="text"id="userBox" onkeydown="
+            if(event.keyCode == 13){ talk()}"
+            placeholder="Type your Question"
+        />
+       
+    </div>
+        <button class="mic" onclick="voice()"> You can Speak Also!<img src="mic.jpg"  width="20px" height="20px" alt=""></button>
+        <p id="chatLog">Answer Appering Hear</p>
+   
+ </div>
+        
+</body>
+</html>
